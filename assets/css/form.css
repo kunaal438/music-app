@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    background-image: url('../img/landing-banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: roboto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_container,
+.content{
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 50px;
+}
+
+.form_container{
+    justify-content: flex-end;
+}
+
+.form_container::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.5);    
+}
+
+.content{
+    justify-content: start;
+}
+
+.loginForm,
+.registerForm{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+}
+
+.loginForm {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    user-select: none;
+}
+
+.registerForm{
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    user-select: none;
+}
+
+.loginForm h2,
+.registerForm h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.loginForm form p label,
+.registerForm form p label{
+    display: block;
+    margin: 25px 0 5px !important;
+    text-align-last: left;
+    text-transform: capitalize;
+}
+
+.loginForm form p input,
+.registerForm form p input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.loginForm form p input:focus,
+.registerForm form p input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.btn{
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 30px auto;
+    display: block;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background: #fff;
+    color: #2f2f2f;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.linkToRegister,
+.linkToLogin{
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.linkToRegister:hover,
+.linkToLogin:hover{
+    text-decoration: underline;
+}
+
+.content-box h2{
+    color: rgb(51, 255, 0);
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.content-box h4{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.content-box ul{
+    list-style: none;
+}
+
+.content-box ul li{
+    text-transform: capitalize;
+    position: relative;
+    margin: 5px 0;
+}
+
+.check{
+    width: 27px;
+    position: absolute;
+    left: -25px;
+    top: -5px;
+}

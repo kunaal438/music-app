@@ -1,0 +1,47 @@
+.album-info{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+    font-family: 'galada';
+}
+
+.album-info img{
+    height: 100%;
+    margin-right: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.album-info h1{
+    font-size: 3rem;
+    line-height: 1;
+    color: #f5f5f5;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.album-info .artist {
+    margin:  -10px 0 5px;
+    font-size: 1.2rem;
+    color: #acacac;
+}
+
+.album-info .total-song{
+    color: #acacac;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 800px){
+    .album-info h1{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .album-info p{
+        font-size: .9rem !important;
+    }
+}

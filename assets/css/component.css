@@ -8,6 +8,14 @@
     background-color: #2f2f2f;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #000000;
+}
+
 .player-container {
     width: 100%;
     height: 12vh;
@@ -249,13 +257,12 @@ input[type="range"]:focus{
 /* side navbar */
 
 .side-nav{
-    width: 20%;
-    min-width: 300px;
+    width: 250px;
     height: calc(100vh - 12vh);
     position: fixed;
     top: 0;
     left: 0;
-    background: #161616;
+    background: #0f0f0f !important;
 }
 
 .logo{
@@ -290,7 +297,7 @@ input[type="range"]:focus{
     width: 30px;
     height: 2;
     color: #fff;
-    background-color: #161616;
+    background-color: #0f0f0f;
     line-height: 100%;
     transform: translateY(-50%);
 }
@@ -309,4 +316,77 @@ input[type="range"]:focus{
 
 .side-nav .links:hover{
     color: #969696;
+}
+
+.main-container{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(100% - 250px);
+    padding: 50px;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: sans-serif;
+    z-index: -1;
+    height: calc(100vh - 12vh);
+    background: rgb(26, 26, 26);
+    overflow-y: scroll;
+}
+
+.songs-grid{
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.songs-container{
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+    padding: 0 10px;
+}
+
+.songs-container img{
+    width: 100%;
+    min-width: 180px;
+    cursor: pointer;
+    border-radius: 10px !important;
+}
+
+.songs-container a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.songs-container p{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+    .songs-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .songs-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-container{
+        width: calc(100% - 200px);
+    }
+    .songs-grid{
+        grid-template-columns: 1fr;
+    }
+    .side-nav{
+        min-width: 200px !important;
+        width: 200px !important;
+    }
 }
